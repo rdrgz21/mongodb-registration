@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Oswald:wght@700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/styles/index.css" />
+    <title>Index</title>
+</head>
+<body>
+    <nav>
+        <div class="nav-link-wrapper current-tab">
+            <a class="nav-link" href="/">
+                <p class="dashboard-text">Dashboard</p>
+            </a>
+        </div>
+        <div class="nav-link-wrapper">
+            <a class="nav-link" href="/register">
+                <p id="register-text">Register</p>
+            </a>
+        </div>
+        {{!-- <div class="nav-link-wrapper admin-link">
+            <img class="admin-pic" src="avatar.png">
+            <p class="username-text">Admin</p>
+        </div> --}}
+    </nav>
+    <div class="registered-users-container">
+        <h3 class="registered-users-text heading">Registered users</h3>
+        
+        <div class="registered-users-flexbox">
+            <div class="row headers">
+                    <div class="column _25">
+                        <p class="username">Name</p>
+                    </div>
+                    <div class="column _50">
+                        <p>Email Address</p>
+                    </div>
+                    <div class="column _25">
+                        {{!-- <p>Options</p> --}}
+                    </div>
+            </div>
+            {{#each users}}
+            <div class="row entries">
+                    <div class="column _25">
+                        <p class="username column-text">{{this.name}}</p>
+                    </div>
+                    <div class="column _50">
+                        <p class="column-text">{{this.email}}</p>
+                    </div>
+                    <div class="column _25 options">
+                        <form action="/update/{{this.id}}" method="GET">
+                            <button class="update-button" type="submit">Update</button>
+                        </form>
+                        <form action="/delete/{{this.id}}" method="GET">
+                            <button class="delete-button" type="submit">Delete</button>
+                        </form>
+                    </div>
+            </div>
+            {{/each}}
+            {{#if message}}
+            <div class="entries" id="deleted-message">
+                <h4 class="message">{{ message }}</h4>
+            </div>
+            {{/if}}
+        </div>
+</body>
+</html>

@@ -1,0 +1,162 @@
+* {
+    margin: 0;
+}
+
+body {
+    background-color: lightgrey;
+    font-family: sans-serif;
+}
+
+nav {
+    background: #404040;
+    height: 3em;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.nav-link-wrapper {
+    display: inline-block;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    height: 2.7em;
+}
+
+#dashboard-text {
+    color: lightgrey;
+}
+
+#dashboard-text:hover {
+    color: lavenderblush;
+}
+
+#register-text {
+    color: lightgrey;
+}
+
+#register-text:hover {
+    color: lavender;
+}
+
+.current-tab {
+    border-bottom: 5px solid #60c48c;
+}
+
+.nav-link {
+    padding: 1em 1em 0;
+    display: inline-block;
+}
+
+.nav-link:hover {
+    color: lavender;
+}
+
+.admin-link {
+    position: absolute;
+    right: 0;
+    height: 3em;
+    width: 8em;
+}
+
+.admin-pic {
+    position: absolute;
+    height: 70%;
+    border-radius: 50%;
+    left: 0;
+    top: 10%;
+    border: 3px solid #60c48c;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.username-text {
+    position: absolute;
+    display: inline-block;
+    top: 1em;
+    right: 1em;
+}
+
+.registration-form-container {
+    position: relative;
+    background-color: white;
+    text-align: center;
+    margin: 2em auto;
+    width: 45%;
+}
+
+.registered-users-text {
+    /* padding: 1em 5px; */
+    display: inline-block;
+
+}
+
+.heading {
+    text-transform: uppercase;
+    font-family: 'Oswald', sans-serif;
+    font-size: 2.5em;
+    color: #60c48c;
+    padding: 0.5em;
+}
+.message {
+    text-align: center;
+    font-size: 1em;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding-bottom: 1.5em;
+}
+
+form {
+    padding-left: 1em;
+    text-align: left;
+    margin: 0 auto;
+    display: inline-block;
+}
+
+label {
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    font-weight: normal;
+}
+
+input {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: normal;
+    outline: none;
+    border: 0;
+    border-bottom: 3px solid darkslategrey;
+    font-size: 2em;
+    padding: 0.5em 0;
+    margin-bottom: 1em;
+    color: mediumpurple;
+}
+
+input:focus {
+    border-bottom: 3px solid #60c48c;
+}
+
+button {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400; 
+    color: white;
+    border: 0;
+    font-size: 1em;
+    padding: 0.5em;
+    background-color:  #60c48c;
+    width: 30%;
+    border-radius: 25px;
+}
+
+#register-button {
+    position: relative;
+    left: 35%;
+    margin-bottom: 2em;
+}
+
+button:hover {
+    background-color: seagreen;;
+}

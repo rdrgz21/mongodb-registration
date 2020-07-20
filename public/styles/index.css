@@ -1,0 +1,204 @@
+* {
+    margin: 0;
+}
+
+/* Main structure*/
+
+body {
+    background-color: lightgrey;
+    font-family: sans-serif;
+}
+
+nav {
+    background: #404040;
+    height: 3em;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.nav-link-wrapper {
+    display: inline-block;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    height: 2.7em;
+}
+
+#register-text {
+    color: lightgrey;
+}
+
+#register-text:hover {
+    color: lavender;
+}
+
+.current-tab {
+    border-bottom: 5px solid #60c48c;
+}
+
+.nav-link {
+    padding: 1em 1em 0;
+    display: inline-block;
+}
+
+.nav-link:hover {
+    color: lavender;
+}
+
+.admin-link {
+    position: absolute;
+    right: 0;
+    height: 3em;
+    width: 8em;
+}
+
+.admin-pic {
+    position: absolute;
+    height: 70%;
+    border-radius: 50%;
+    left: 0;
+    top: 10%;
+    border: 3px solid #60c48c;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.username-text {
+    position: absolute;
+    display: inline-block;
+    top: 1em;
+    right: 1em;
+}
+
+.registered-users-container {
+    position: relative;
+    background-color: white;
+    text-align: left;
+    margin: 2em auto;
+    width: 80%;
+}
+
+/* Flexbox */
+
+.row {
+   display: flex;
+   /* padding: 1em 0;  */
+   border-bottom: 3px solid lightgrey;
+}
+
+._15 {
+    flex: 0.15;
+}
+
+._20 {
+    flex: 0.2;
+}
+
+._25{
+    flex: 0.25;
+}
+
+._30 {
+    flex: 0.3;
+}
+
+._35 {
+    flex: 0.35;
+}
+
+._50 {
+    flex: 0.5;
+}
+
+form {
+    display: inline-block;
+}
+
+.options {
+    text-align: center;
+    padding-right: 0.5em;
+}
+
+.entries {
+    padding: 1em 0;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+}
+
+.entries:hover {
+    background-color: lavender;
+}
+
+#deleted-message {
+    background-color: lavender;
+    text-align: center;
+}
+
+.column-text {
+    padding-top: 0.6em;
+    padding-left: 0;
+}
+
+.username {
+    padding-left: 1em;
+}
+
+button {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400; 
+    color: white;
+    border: 0;
+    font-size: 1em;
+    padding: 0.5em;
+    border-radius: 25px;
+}
+
+.update-button {
+    background-color:  #60c48c;
+}
+
+.update-button:hover {
+    background-color:  seagreen;
+}
+
+.delete-button {
+    background-color: darkslategray;
+}
+
+.delete-button:hover {
+    background-color: black;
+}
+/*Text*/
+
+/* h1 {
+    position: relative;
+    left: 10%;
+    padding: 1em 0;
+    text-transform: uppercase;
+    font-family: 'Oswald', sans-serif;
+} */
+
+.registered-users-text {
+    /* padding: 1em 5px; */
+    display: inline-block;
+
+}
+
+.heading {
+    text-transform: uppercase;
+    font-family: 'Oswald', sans-serif;
+    font-size: 2.5em;
+    color: #60c48c;
+    padding: 0.5em;
+}
+
+.headers {
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding-bottom: 0.5em;
+}

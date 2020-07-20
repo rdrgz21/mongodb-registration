@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Oswald:wght@700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="/styles/register.css" />
+    <title>Register</title>
+</head>
+<body>
+    <nav>
+        <div class="nav-link-wrapper">
+            <a class="nav-link" href="/">
+                <p class="dashboard-text" id="dashboard-text">Dashboard</p>
+            </a>
+            </div>
+
+        <div class="nav-link-wrapper current-tab">
+            <a class="nav-link" href="/register">
+                <p id="register-text">Register</p>
+            </a>
+        </div>
+        {{!-- <div class="nav-link-wrapper admin-link">
+            <img class="admin-pic" src="avatar.png">
+            <p class="username-text">Admin</p>
+        </div> --}}
+    </nav>
+    <div class="registration-form-container">
+        <h3 class="registration-form-text heading">Register</h3>
+        <form action="/register" method="POST">
+            <label for="userName">Username</label>
+            <br>
+            <input type="text" name="userName" id="userName" required/>
+            <br>
+            <label for="userEmail">Email Address</label>
+            <br>
+            <input type="email" name="userEmail" id="userEmail" required/>
+            <br>
+            <label for="userPassword">Password</label>
+            <br>
+            <input type="password" name="userPassword" id="userPassword" required/>
+            <br>
+            <label for="userPassword2">Re-enter Password</label>
+            <br>
+            <input type="password" name="userPassword2" id="userPassword2" required/>
+            <br>
+            <button id="register-button" type="submit">Register</button>
+        </form>
+        {{#if message}}
+            <h4 class="registration-form-text message">{{ message }}</h4>
+        {{/if}}
+    </div>
+</body>
+</html>

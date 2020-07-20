@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Oswald:wght@700&display=swap" rel="stylesheet">
+  
+    <link rel="stylesheet" href="/styles/update.css" />
+    <title>Update</title>
+</head>
+<body>
+    <nav>
+        <div class="nav-link-wrapper">
+            <a class="nav-link" href="/">
+                <p class="dashboard-text" id="dashboard-text">Dashboard</p>
+            </a>
+            </div>
+
+        <div class="nav-link-wrapper">
+            <a class="nav-link" href="/register">
+                <p id="register-text">Register</p>
+            </a>
+        </div>
+        <div class="nav-link-wrapper current-tab">
+            <a class="nav-link" href="">
+                <p id="update-user-text">Update User</p>
+            </a>
+        </div>
+        {{!-- <div class="nav-link-wrapper admin-link">
+            <img class="admin-pic" src="avatar.png">
+            <p class="username-text">Admin</p>
+        </div> --}}
+    </nav>
+    <div class="registration-form-container">
+        <h3 class="registration-form-text heading">Update User</h3>
+        <form action="/update/{{userId}}" method="POST">
+            <label for="userName">Username:</label>
+            <br>
+            <input type="text" value={{userName}} name="newUserName" id="userName">
+            <br>
+            <label for="userEmail">Email Address:</label>
+            <br>
+            <input type="email" value={{userEmail}} name="newUserEmail" id="userEmail">
+            <br>
+            <label for="currentPassword">Current Password:</label>
+            <br>
+            <input type="password" name="currentPassword" id="currentEmail">
+            <br>
+            <label for="newPassword">New Password:</label>
+            <br>
+            <input type="password" name="newUserPassword" id="newPassword">
+            <br>        
+            <label for="newPassword2">Re-enter New Password:</label>
+            <br>
+            <input type="password" name="newUserPassword2" id="newPassword2">
+            <br>
+            <button id="register-button" type="submit">Update</button>
+        </form>
+        {{#if message}}
+            <h4 class="registration-form-text message">{{ message }}</h4>
+        {{/if}}
+    </div>
+</body>
+</html>
